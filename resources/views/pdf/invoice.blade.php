@@ -18,7 +18,8 @@
                 sans-serif,
                 'Apple Color Emoji',
                 'Segoe UI Emoji',
-                'DejaVu Sans';
+                'DejaVu Sans',
+                'Noto Sans Thai';
             font-size: 16px;
         }
 

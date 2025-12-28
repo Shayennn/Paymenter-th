@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ !$invoice->number && config('settings.invoice_proforma', false) ? __('invoices.proforma_invoice', ['id' => $invoice->id]) : __('invoices.invoice', ['id' => $invoice->number]) }}</title>
     <style>
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: normal;
+            font-weight: normal;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai.ttf') }}') format('truetype');
+        }
+
         body {
             font-family:
                 system-ui,

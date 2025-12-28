@@ -59,6 +59,7 @@ return [
     'renews_on' => 'ต่ออายุเมื่อ',
     'auto_pay' => 'ชำระเงินอัตโนมัติด้วย',
     'auto_pay_not_configured' => 'ยังไม่ได้ตั้งค่า',
+    'expires_at' => 'หมดอายุวันที่',
 
     'no_services' => 'ไม่พบบริการ',
     'update_billing_agreement' => 'ปรับปรุงข้อตกลงการเรียกเก็บเงิน',

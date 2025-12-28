@@ -59,6 +59,7 @@ return [
     'renews_on' => 'Renews on',
     'auto_pay' => 'Auto paying using',
     'auto_pay_not_configured' => 'Not configured',
+    'expires_at' => 'Expires at',
 
     'no_services' => 'No services found',
     'update_billing_agreement' => 'Update Billing Agreement',

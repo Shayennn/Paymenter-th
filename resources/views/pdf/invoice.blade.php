@@ -6,28 +6,95 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ !$invoice->number && config('settings.invoice_proforma', false) ? __('invoices.proforma_invoice', ['id' => $invoice->id]) : __('invoices.invoice', ['id' => $invoice->number]) }}</title>
     <style>
+        /* Thin - 100 */
         @font-face {
             font-family: 'Noto Sans Thai';
             font-style: normal;
-            font-weight: normal;
-            src: url('{{ resource_path(' views/pdf/fonts/NotoSansThai.ttf') }}') format('truetype');
-            unicode-range: U+0E00-U+0E7F, U+200C-U+200D;
+            font-weight: 100;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-Thin.ttf') }}') format('truetype');
+        }
+
+        /* ExtraLight - 200 */
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: normal;
+            font-weight: 200;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-ExtraLight.ttf') }}') format('truetype');
+        }
+
+        /* Light - 300 */
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: normal;
+            font-weight: 300;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-Light.ttf') }}') format('truetype');
+        }
+
+        /* Regular - 400 */
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: normal;
+            font-weight: 400;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-Regular.ttf') }}') format('truetype');
+        }
+
+        /* Medium - 500 */
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: normal;
+            font-weight: 500;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-Medium.ttf') }}') format('truetype');
+        }
+
+        /* SemiBold - 600 */
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: normal;
+            font-weight: 600;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-SemiBold.ttf') }}') format('truetype');
+        }
+
+        /* Bold - 700 */
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: normal;
+            font-weight: 700;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-Bold.ttf') }}') format('truetype');
+        }
+
+        /* ExtraBold - 800 */
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: normal;
+            font-weight: 800;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-ExtraBold.ttf') }}') format('truetype');
+        }
+
+        /* Black - 900 */
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: normal;
+            font-weight: 900;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-Black.ttf') }}') format('truetype');
+        }
+
+        /* Italic fallbacks (use regular/bold since no italic variants exist) */
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: italic;
+            font-weight: 400;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-Regular.ttf') }}') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Noto Sans Thai';
+            font-style: italic;
+            font-weight: 700;
+            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai/NotoSansThai-Bold.ttf') }}') format('truetype');
         }
 
         body {
-            font-family:
-                'Noto Sans Thai',
-                system-ui,
-                -apple-system,
-                /* Firefox supports this but not yet `system-ui` */
-                'Segoe UI',
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif,
-                'Apple Color Emoji',
-                'Segoe UI Emoji',
-                'DejaVu Sans';
+            font-family: 'Noto Sans Thai', 'DejaVu Sans', sans-serif;
             font-size: 16px;
         }
 

@@ -11,10 +11,12 @@
             font-style: normal;
             font-weight: normal;
             src: url('{{ resource_path('views/pdf/fonts/NotoSansThai.ttf') }}') format('truetype');
+            unicode-range: U+0E00-U+0E7F, U+200C-U+200D;
         }
 
         body {
             font-family:
+                'Noto Sans Thai',
                 system-ui,
                 -apple-system,
                 /* Firefox supports this but not yet `system-ui` */
@@ -25,8 +27,7 @@
                 sans-serif,
                 'Apple Color Emoji',
                 'Segoe UI Emoji',
-                'DejaVu Sans',
-                'Noto Sans Thai';
+                'DejaVu Sans';
             font-size: 16px;
         }
 

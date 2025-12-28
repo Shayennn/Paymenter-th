@@ -10,7 +10,7 @@
             font-family: 'Noto Sans Thai';
             font-style: normal;
             font-weight: normal;
-            src: url('{{ resource_path('views/pdf/fonts/NotoSansThai.ttf') }}') format('truetype');
+            src: url('{{ resource_path(' views/pdf/fonts/NotoSansThai.ttf') }}') format('truetype');
             unicode-range: U+0E00-U+0E7F, U+200C-U+200D;
         }
 
@@ -136,7 +136,7 @@
                 <strong>{{ __('invoices.issued_to') }}</strong><br>
                 {{ $invoice->user_name }} <br />
                 @foreach($invoice->user_properties as $property)
-                    {{ $property }} <br />
+                {{ $property }} <br />
                 @endforeach
             </td>
             <td>

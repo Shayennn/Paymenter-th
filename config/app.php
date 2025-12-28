@@ -112,6 +112,7 @@ return [
         'pt' => 'Português',
         'pl' => 'Polski',
         'sr' => 'Српски',
+        'th' => 'ภาษาไทย',
         'tr' => 'Türkçe',
         'zh' => '中文',
 
